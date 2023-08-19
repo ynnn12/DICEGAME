@@ -1,0 +1,133 @@
+body {
+  font-family: Verdana;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buttons-container button {
+  margin-right: 20px; /* 오른쪽 여백 설정 */
+  padding: 10px 20px; /* 패딩 설정 */
+  background-color: skyblue; /* 배경색 설정 */
+  border: none; /* 테두리 제거 */
+  color: white; /* 글자 색상 설정 */
+  cursor: pointer; /* 커서 모양 변경 */
+  font-size: 18px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 600px;
+  height: 600px;
+  background-color: #ffc7d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.box2 {
+  width: 600px;
+  height: 600px;
+  background-color: #ffc7d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  position: relative;
+}
+
+.box .player-name,
+.box2 .player-name {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 0;
+  text-align: center;
+  align-self: center; /* 가로로 가운데에 배치 */
+  margin-top: auto; /* 세로로 하단에 배치 */
+}
+
+.box .player-current-score,
+.box2 .player-current-score {
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #feffc1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* 가로 중앙 정렬을 위한 너비 설정 */
+  padding: 10px 0; /* 내부 여백 추가 */
+  border-radius: 20px 20px 0 0;
+}
+
+.box .total-score-box1,
+.box2 .total-score-box2 {
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #feffc1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* 가로 중앙 정렬을 위한 너비 설정 */
+  padding: 10px 0; /* 내부 여백 추가 */
+  border-radius: 0 0 20px 20px;
+}
+
+.box .player-current-score,
+.box2 .player-current-score {
+  margin-top: auto; /* 세로로 하단에 배치 */
+  flex-grow: 0; /* flex-grow를 0으로 설정하여 너무 많은 공간을 차지하지 않도록 함 */
+}
+
+/* 추가: player-name에도 내부 여백 추가 */
+.box .player-name,
+.box2 .player-name {
+  padding: 10px 0;
+}
+
+.dice {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.side {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #db6262;
+  border-radius: 50%;
+  margin: 5px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.box.active,
+.box2.active {
+  background-color: #b4fad9;
+}
